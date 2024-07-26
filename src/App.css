@@ -1,38 +1,119 @@
-.App {
+/* src/App.css */
+
+body {
+  font-family: "Lora", serif;
+  background-image: url("https://i0.wp.com/asisprojetos.com.br/wp-content/uploads/2023/10/Artigo_05-10_BLOG.jpg"); /* Use a URL válida para o fundo */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
   text-align: center;
+  margin: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #4caf50; /* Verde nota de dólar */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.balance {
+  margin-bottom: 20px;
+  color: #4caf50; /* Verde nota de dólar */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+form div {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+
+form label {
+  margin-right: 10px;
+}
+
+form input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #4caf50; /* Verde nota de dólar */
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+form button:hover {
+  background-color: #45a049;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.transaction-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.transaction-list li {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.transaction-list li span {
+  color: #333;
+}
+
+.transaction-list li button {
+  padding: 5px 10px;
+  margin-left: 5px;
+  background-color: #f44336; /* Vermelho para remover */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.transaction-list li button:hover {
+  background-color: #e53935;
+}
+
+.transaction-list li button.edit-button {
+  background-color: #ff9800; /* Laranja para editar */
+}
+
+.transaction-list li button.edit-button:hover {
+  background-color: #fb8c00;
+}
+
+.transaction-list li div {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
 }
